@@ -43,7 +43,7 @@ export function Footer() {
             </div>
 
             <div className="pt-1 font-mono text-[11px] text-[#4F6355] dark:text-emerald-100/50">
-              Team Astra
+              Funky Farmers
             </div>
           </div>
 
