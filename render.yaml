@@ -1,0 +1,28 @@
+services:
+  - type: web
+    name: epiflora-api
+    runtime: node
+    region: singapore
+    plan: free
+    buildCommand: npm ci
+    startCommand: npm run start
+    healthCheckPath: /api/health
+    envVars:
+      - key: NODE_VERSION
+        value: 20.19.0
+      - key: FLORA_ENV
+        value: production
+      - key: AI_PROVIDER_CHAIN
+        value: gemini,demo
+      - key: AI_MODEL_CHAIN
+        value: gemini-3.5-flash-lite
+      - key: GEMINI_THINKING_LEVEL
+        value: low
+      - key: OLLAMA_ENABLED
+        value: "false"
+      - key: DAILY_REQUEST_BUDGET
+        value: "200"
+      - key: DEMO_MODE
+        value: "false"
+      - key: GEMINI_API_KEY
+        sync: false

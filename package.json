@@ -8,6 +8,7 @@
     "dev": "concurrently -n web,api -c green,cyan \"npm:dev:web\" \"npm:dev:api\"",
     "dev:web": "vite",
     "dev:api": "tsx watch server/dev.ts",
+    "start": "tsx server/render.ts",
     "build": "tsc -b && vite build",
     "preflight": "tsx scripts/preflight.ts",
     "smoke": "tsx scripts/smoke.ts",

@@ -1,6 +1,6 @@
 import { useCallback, useState } from 'react';
 import type { Provenance } from '@shared/types.ts';
-import { ApiRequestError } from '../lib/api.ts';
+import { API_BASE, ApiRequestError } from '../lib/api.ts';
 import { useAppStore } from '../store/appStore.ts';
 
 /**
@@ -152,7 +152,7 @@ export function useVoiceAsk() {
           }),
         );
 
-        const response = await fetch('/api/voice/ask', { method: 'POST', body: form });
+        const response = await fetch(`${API_BASE}/voice/ask`, { method: 'POST', body: form });
         const payload: unknown = await response.json().catch(() => null);
 
         if (!response.ok) {
