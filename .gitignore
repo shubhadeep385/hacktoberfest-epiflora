@@ -1,0 +1,16 @@
+node_modules/
+dist/
+.vercel/
+.env
+.env.local
+.env.*.local
+*.log
+npm-debug.log*
+.DS_Store
+.vite/
+tsconfig.*.tsbuildinfo
+*.tsbuildinfo
+.cache/
+.vscode/
+
+.vercel
